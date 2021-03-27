@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the Ojas Innovative !</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello dear {{ user.username }}</h2>
+    {% else %}
+        <h2>Register and Login to Ojas Innovative</h2>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
